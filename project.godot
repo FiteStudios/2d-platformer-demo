@@ -10,10 +10,19 @@ config_version=3
 
 [application]
 
-config/name="New Game Project"
+config/name="Jordan & Tarren's Amazing Game"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/fps/force_fps=60
+
+[display]
+
+window/vsync/use_vsync=false
+
 [rendering]
 
+environment/default_clear_color=Color( 0.175781, 0.175781, 0.175781, 1 )
 environment/default_environment="res://default_env.tres"
