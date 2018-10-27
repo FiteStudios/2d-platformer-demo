@@ -14,13 +14,14 @@ config/name="Jordan & Tarren's Amazing Game"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
-[debug]
-
-settings/fps/force_fps=60
-
 [display]
 
 window/vsync/use_vsync=false
+
+[global]
+
+Limit=false
+"Limit Frame"=0
 
 [rendering]
 
