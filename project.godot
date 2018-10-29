@@ -10,32 +10,9 @@ config_version=3
 
 [application]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+[application]
+
+config/name="New Game Project"
 config/name="2d-platformer-demo"
-=======
-config/name="Jordan & Tarren's Amazing Game"
->>>>>>> beta
-=======
-config/name="New Game Project"
->>>>>>> parent of 9a61a7b... Changed project name
-=======
-config/name="New Game Project"
->>>>>>> parent of 9a61a7b... Changed project name
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/vsync/use_vsync=false
-
-[global]
-
-Limit=false
-"Limit Frame"=0
-
-[rendering]
-
-environment/default_clear_color=Color( 0.175781, 0.175781, 0.175781, 1 )
-environment/default_environment="res://default_env.tres"
