@@ -10,10 +10,24 @@ config_version=3
 
 [application]
 
+<<<<<<< HEAD
 config/name="2d-platformer-demo"
+=======
+config/name="Jordan & Tarren's Amazing Game"
+>>>>>>> beta
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/vsync/use_vsync=false
+
+[global]
+
+Limit=false
+"Limit Frame"=0
+
 [rendering]
 
+environment/default_clear_color=Color( 0.175781, 0.175781, 0.175781, 1 )
 environment/default_environment="res://default_env.tres"
