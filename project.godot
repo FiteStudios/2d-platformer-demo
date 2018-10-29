@@ -12,10 +12,14 @@ config_version=3
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 config/name="2d-platformer-demo"
 =======
 config/name="Jordan & Tarren's Amazing Game"
 >>>>>>> beta
+=======
+config/name="New Game Project"
+>>>>>>> parent of 9a61a7b... Changed project name
 =======
 config/name="New Game Project"
 >>>>>>> parent of 9a61a7b... Changed project name
