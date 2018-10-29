@@ -11,10 +11,14 @@ config_version=3
 [application]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config/name="2d-platformer-demo"
 =======
 config/name="Jordan & Tarren's Amazing Game"
 >>>>>>> beta
+=======
+config/name="New Game Project"
+>>>>>>> parent of 9a61a7b... Changed project name
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
