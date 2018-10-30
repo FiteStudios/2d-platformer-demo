@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/player/player_0.png" type="Texture" id=2]
@@ -7,7 +7,8 @@
 [ext_resource path="res://sprites/player/player_3.png" type="Texture" id=5]
 [ext_resource path="res://sprites/player/player_4.png" type="Texture" id=6]
 [ext_resource path="res://Camera2D.gd" type="Script" id=7]
-[ext_resource path="res://Ground.tres" type="TileSet" id=8]
+[ext_resource path="res://Player2.gd" type="Script" id=8]
+[ext_resource path="res://Ground.tres" type="TileSet" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,7 +18,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ), null, ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "run",
 "speed": 6.0
@@ -31,7 +32,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 37.2816, 52.1942 )
+extents = Vector2( 64.8745, 52.1942 )
 
 [node name="World" type="Node" index="0"]
 
@@ -94,11 +95,71 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMap" type="TileMap" parent="." index="1"]
+[node name="Player2" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 108.617, 678.219 )
+scale = Vector2( 0.581787, 0.256835 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Player2" index="0"]
+
+position = Vector2( 0, -162.847 )
+scale = Vector2( 11, 38.1412 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" index="1"]
+
+position = Vector2( -1.43051e-006, -109.871 )
+scale = Vector2( 0.82067, 3.52714 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Player2" index="2"]
+
+position = Vector2( -0.218506, 1.2168 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.15
+drag_margin_right = 0.1
+drag_margin_bottom = 0.15
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+script = ExtResource( 7 )
+_sections_unfolded = [ "Editor", "Smoothing" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
 
 scale = Vector2( 9, 9 )
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 6, 6 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -118,5 +179,7 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Node" type="Node" parent="." index="3"]
 
 
